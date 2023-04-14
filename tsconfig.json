@@ -1,0 +1,12 @@
+{
+	"extends": "@vue/tsconfig/tsconfig.json",
+	"include": ["**/*.ts", "**/*.vue"],
+	"compilerOptions": {
+		"paths": {
+			"#p/*": ["./client/*"],
+			"#c/*": ["./common/*"],
+			"#s/*": ["./server/*"],
+		},
+		"ignoreDeprecations": "5.0",
+	},
+}
