@@ -2,6 +2,8 @@
 	"extends": ["@vue/tsconfig/tsconfig.node.json", "../tsconfig.json"],
 	"include": ["./**/*.ts"],
 	"compilerOptions": {
+		"module": "ESNext",
+		"target": "ESNext",
 		"outDir": "../~$dist",
 		"baseUrl": ".",
 		"paths": {

@@ -4,19 +4,23 @@
 	"type": "module",
 	"scripts": {
 		"client:dev": "vite client",
-		"client:build": "pnpm run type-check vite build client",
-		"client:preview": "vite preview",
+		"client:build": "pnpm run type-check && vite build client",
 		"server:run": "pnpm run server:build && node './~$dist/server/index.js'",
 		"server:build": "tsc --project server/tsconfig.json",
 		"type-check": "vue-tsc --noEmit",
-		"lint": "eslint . --ext .vue,.js,.ts --fix --ignore-path .gitignore"
+		"lint": "eslint . --ext .vue,.js,.ts --fix --ignore-path .gitignore",
+		"client:preview": "vite preview client"
 	},
 	"dependencies": {
-		"@fastify/cors": "^8.2.1",
-		"fastify": "^4.15.0"
+		"@trpc/server": "^10.20.0",
+		"cors": "^2.8.5",
+		"superjson": "^1.12.2",
+		"zod": "^3.21.4"
 	},
 	"devDependencies": {
 		"@ky-is/eslint-config": "^2.5.1",
+		"@trpc/client": "^10.20.0",
+		"@types/cors": "^2.8.13",
 		"@types/node": "^18.15.11",
 		"@vitejs/plugin-vue": "^4.1.0",
 		"@vue/eslint-config-typescript": "^11.0.2",
