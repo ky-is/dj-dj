@@ -5,8 +5,9 @@
 	"scripts": {
 		"client:dev": "vite client",
 		"client:build": "pnpm run type-check && vite build client",
-		"server:run": "pnpm run server:build && node './~$dist/server/index.js'",
+		"server:run": "pnpm run server:build && node --es-module-specifier-resolution=node './~$dist/server'",
 		"server:build": "tsc --project server/tsconfig.json",
+		"generate": "node_modules/.bin/openapi --indent tab --input https://raw.githubusercontent.com/sonallux/spotify-web-api/main/fixed-spotify-open-api.yml --output common/spotify.api",
 		"type-check": "vue-tsc --noEmit",
 		"lint": "eslint . --ext .vue,.js,.ts --fix --ignore-path .gitignore",
 		"client:preview": "vite preview client"
@@ -29,6 +30,7 @@
 		"eslint": "^8.38.0",
 		"eslint-plugin-vue": "^9.10.0",
 		"npm-run-all": "^4.1.5",
+		"openapi-typescript-codegen": "^0.24.0",
 		"pinia": "^2.0.34",
 		"postcss": "^8.4.21",
 		"tailwindcss": "^3.3.1",
