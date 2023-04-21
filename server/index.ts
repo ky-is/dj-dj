@@ -1,4 +1,7 @@
 /// <reference lib="dom" />
+import { config as dotenvConfig } from 'dotenv'
+dotenvConfig({ path: 'server/.env' })
+
 import { createHTTPServer } from '@trpc/server/adapters/standalone'
 import cors from 'cors'
 import { z } from 'zod'
