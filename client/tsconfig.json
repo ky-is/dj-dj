@@ -7,11 +7,10 @@
 		"paths": {
 			"#p/*": ["./*"],
 			"#c/*": ["../common/*"],
+			"#s/*": ["../server/*"],
 		},
 	},
 	"references": [
-		{
-			"path": "./tsconfig.node.json",
-		},
+		{ "path": "./tsconfig.node.json" },
 	],
 }
