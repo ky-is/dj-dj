@@ -1,9 +1,14 @@
 {
-	"extends": ["@vue/tsconfig/tsconfig.node.json", "../tsconfig.json"],
+	"extends": [
+		"@tsconfig/node18/tsconfig.json",
+		"@vue/tsconfig/tsconfig.json",
+		"../tsconfig.json",
+	],
 	"include": ["./**/*.ts"],
 	"compilerOptions": {
 		"module": "ESNext",
 		"target": "ESNext",
+		"types": ["node"],
 		"outDir": "../~$dist",
 		"baseUrl": ".",
 		"paths": {

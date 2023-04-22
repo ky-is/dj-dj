@@ -1,7 +1,12 @@
 {
-	"extends": ["@vue/tsconfig/tsconfig.web.json", "../tsconfig.json"],
+	"extends": [
+		"@tsconfig/node18/tsconfig.json",
+		"@vue/tsconfig/tsconfig.json",
+		"../tsconfig.json",
+	],
 	"include": ["./**/*.ts", "../server/errors.ts", "../server/errors.ts"],
 	"compilerOptions": {
+		"noEmit": true,
 		"types": ["node"],
 		"baseUrl": ".",
 		"paths": {

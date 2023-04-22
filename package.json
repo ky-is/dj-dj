@@ -2,6 +2,9 @@
 	"name": "dj-dj",
 	"version": "0.0.0",
 	"type": "module",
+	"engines": {
+		"node": "^18"
+	},
 	"scripts": {
 		"client:dev": "vite client",
 		"client:build": "pnpm run type-check && vite build client",
@@ -13,32 +16,33 @@
 		"client:preview": "vite preview client"
 	},
 	"dependencies": {
-		"@trpc/server": "^10.20.0",
+		"@trpc/server": "^10.21.1",
 		"cors": "^2.8.5",
 		"dotenv": "^16.0.3",
-		"superjson": "^1.12.2",
+		"superjson": "^1.12.3",
 		"zod": "^3.21.4"
 	},
 	"devDependencies": {
 		"@ky-is/eslint-config": "^2.5.1",
-		"@trpc/client": "^10.20.0",
+		"@trpc/client": "^10.21.1",
+		"@tsconfig/node18": "^2.0.0",
 		"@types/cors": "^2.8.13",
-		"@types/node": "^18.15.11",
+		"@types/node": "^18.15.13",
 		"@vitejs/plugin-vue": "^4.1.0",
 		"@vue/eslint-config-typescript": "^11.0.2",
-		"@vue/tsconfig": "^0.1.3",
-		"eslint": "^8.38.0",
-		"eslint-plugin-vue": "^9.10.0",
+		"@vue/tsconfig": "^0.2.0",
+		"eslint": "^8.39.0",
+		"eslint-plugin-vue": "^9.11.0",
 		"npm-run-all": "^4.1.5",
 		"openapi-typescript-codegen": "^0.24.0",
-		"pinia": "^2.0.34",
-		"postcss": "^8.4.21",
+		"pinia": "^2.0.35",
+		"postcss": "^8.4.23",
 		"tailwindcss": "^3.3.1",
 		"typescript": "^5.0.4",
-		"vite": "^4.2.1",
+		"vite": "^4.3.1",
 		"vue": "^3.2.47",
 		"vue-router": "^4.1.6",
-		"vue-tsc": "^1.2.0"
+		"vue-tsc": "^1.4.2"
 	},
 	"imports": {
 		"#c/*": "./~$dist/common/*",
